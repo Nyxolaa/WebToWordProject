@@ -27,9 +27,9 @@ def main(url, file_name):
     soup = parse_content(html_content)
     text_content = extract_text(soup)
     save_to_word(text_content, file_name)
-    print(f"Web sayfası içeriği başarıyla {file_name} dosyasına aktarıldı.")
+    print(f"The web page content has been successfully exported to {file_name}.")
 
 if __name__ == "__main__":
-    url = input("Web sayfası URL'sini girin: ")
-    file_name = input("Kaydedilecek Word dosyasının adını girin (örn. output.docx): ")
+    url = input("Enter the URL of the website -> (https://example.com): ")
+    file_name = input("Enter the name of the Word file to be saved -> (e.g. output.docx): ")
     main(url, file_name)
